@@ -1,39 +1,58 @@
 html{height:100%;background:#2b275d}
 
-#cloud-dark{width:100%;height:70vh;position: absolute;z-index:1;top:0;left:0;
-background:url('img/cloud-dark.svg') repeat-x left;
--webkit-animation: AnimationName 40s linear infinite;
--moz-animation: AnimationName 40s linear infinite;
--o-animation: AnimationName 40s linear infinite;
-animation: AnimationName 40s linear infinite;
+.cloud-wrapper{height:70vh}
+
+#cloud-dark{width:5076px;height:95%;position:absolute;z-index:1;top:0;left:0;background:url('img/cloud-dark.svg') repeat-x;animation:movingCloud 140s linear infinite}
+#cloud-white{width:5076px;height:100%;position:absolute;z-index:12;top:0;left:0;background:url('img/cloud-white.svg') repeat-x;animation:movingCloud 60s linear infinite}
+@keyframes movingCloud{
+0%{transform:translate3d(0, 0, 0)}
+100%{transform:translate3d(-1692px, 0, 0)}
+}
+@-moz-keyframes movingCloud{
+0%{-moz-transform:translate3d(0, 0, 0)}
+100%{-moz-transform:translate3d(-1692px, 0, 0)}
+}
+@-webkit-keyframes movingCloud{
+0%{-webkit-transform:translate3d(0, 0, 0)}
+100%{-webkit-transform:translate3d(-1692px, 0, 0)}
+}
+@-o-keyframes movingCloud{
+0%{-o-transform:translate3d(0, 0, 0)}
+100%{-o-transform:translate3d(-1692px, 0, 0)}
+}
+@-ms-keyframes movingCloud{
+0%{-ms-transform:translate3d(0, 0, 0)}
+100%{-ms-transform:translate3d(-1692px, 0, 0)}
 }
 
-#cloud-white{width:100%;height:70vh;position: absolute; z-index:20;top:0;left:0;
-  background:url('img/cloud-white.svg');
-  -webkit-animation: AnimationName 20s linear infinite;
-  -moz-animation: AnimationName 20s linear infinite;
-  -o-animation: AnimationName 20s linear infinite;
-  animation: AnimationName 20s linear infinite;
+.water{width:100%;height:156px;position:absolute;bottom:24px;background:#1b1844;z-index:3;animation:movingMountains 12s linear;animation-iteration-count:1;transform-origin:50% 50%}
+.mountains{position:absolute;z-index:5;background:url('img/mountains.svg') repeat-x left;width:100%;height:93px;bottom:180px;animation:movingMountains 12s linear;animation-iteration-count:1;transform-origin:50% 50%}
+@keyframes movingMountains{
+0%{transform:translate(0,-20vh)}
+100%{transform:translate(0,0)}
 }
 
-@-webkit-keyframes AnimationName {
-  from { background-position: 0 0; }
-  to { background-position: -100% 0; }
+.tree{position:absolute;z-index:17;background:url('img/tree.svg') repeat-x top center;width:100%;height:182px;bottom:0;animation:movingTree1 12s linear;animation-iteration-count:1;transform-origin:50% 50%}
+.tree:after{content:'';height:100vh;background:#0f0f1e;width:100%;display:block;margin-top:153px}
+.tree2{position:absolute;z-index:15;background:url('img/tree.svg') repeat-x left bottom;width:100%;height:112px;bottom:60px;opacity:0.88;animation:movingTree2 12s linear;animation-iteration-count:1;transform-origin:50% 50%}
+.tree2:after{content:'';height:100vh;background:#0f0f1e;width:100%;display:block;margin-top:112px}
+@keyframes movingTree1{
+0%{transform:translate(0,-35vh)}
+100%{transform:translate(0,0)}
 }
-@-moz-keyframes AnimationName {
-  from { background-position: 0 0; }
-  to { background-position: -100% 0; }
-}
-@-o-keyframes AnimationName {
-  from { background-position: 0 0; }
-  to { background-position: -100% 0; }
-}
-@keyframes AnimationName {
-  from { background-position: 0 0; }
-  to { background-position: -100% 0; }
+@keyframes movingTree2{
+0%{transform:translate(0,-37vh)}
+100%{transform:translate(0,0)}
 }
 
-.mountains{position:absolute;z-index:5;background:url('img/mountains.svg') repeat-x left;width:100%;height:93px;bottom:180px}
-.tree{position:absolute;z-index:7;background:url('img/tree.svg') repeat-x center bottom;width:100%;height:182px;bottom:0}
-.tree2{position:absolute;z-index:5;background:url('img/tree.svg') repeat-x left bottom;width:100%;height:112px;bottom:50px;opacity:0.88}
-.moon{position:absolute;z-index:2;background:url('img/moon.svg') no-repeat center;width:320px;height:320px;top:100px;margin:0 auto;left:0;right:0}
+.moon{position:absolute;z-index:2;background:url('img/moon.svg') no-repeat center;width:320px;height:320px;top:100px;margin:0 auto;left:0;right:0;animation:movingMoon 16s linear;animation-iteration-count:1;transform-origin:50% 50%}
+@keyframes movingMoon{
+0%{transform:translate(0,60vh)}
+100%{transform:translate(0,0)}
+}
+
+.wolf{width:354px;height:382px;position:absolute;background:url('img/wolf.svg') no-repeat;bottom:-20px;left:-20px;z-index:20;animation:movingWolf 12s linear;animation-iteration-count:1;transform-origin:50% 50%}
+@keyframes movingWolf{
+0%{transform:translate(-300px,0)}
+100%{transform:translate(0,0)}
+}
