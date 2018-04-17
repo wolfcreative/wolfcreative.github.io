@@ -1,5 +1,8 @@
 html{height:100%;background:radial-gradient(ellipse at bottom,#1b2735 0%,#090a0f 100%);overflow:hidden}
 
+a{color:#fff}
+a:hover,a:focus{color:#fff}
+
 .title{color:#fff;fill:#fff}
 .title svg{max-width:200px;width:100%;margin-top:-20px}
 
