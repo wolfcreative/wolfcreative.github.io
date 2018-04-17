@@ -2,6 +2,7 @@ html{height:100%;background:radial-gradient(ellipse at bottom,#1b2735 0%,#090a0f
 
 .uk-button-text{color:#fff}
 .uk-button-text:hover,.uk-button-text:focus{color:#fff}
+.uk-button-text:before{border-color:#fff}
 
 .title{color:#fff;fill:#fff}
 .title svg{max-width:200px;width:100%;margin-top:-20px}
