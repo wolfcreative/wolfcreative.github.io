@@ -110,4 +110,9 @@ function runParticles() {
     "retina_detect": true
   });
 };
-window.addEventListener("DOMContentLoaded", runParticles);
+
+if (document.readyState != 'loading'){
+  runParticles();
+} else {
+  document.addEventListener('DOMContentLoaded', runParticles);
+}
